@@ -16,5 +16,7 @@
     <a href="niz.php">Primer 1</a>
     <br>
     <a href="kreirajTabelu.php">Primer 2</a>
+    <br>
+    <a href="rezervacijaBioskop.php">Bioskop</a>
 </body>
 </html>

@@ -12,6 +12,9 @@
         th, td {
             padding: 30px;
         }
+        .color{
+            background-color: gray;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +30,7 @@
     <label for="brKolone">Broj kolone: </label>
     <input type="number" name="brKolone">
 
-    <input type="submit">
+    <input type="submit" value="Kreiraj tabelu">
 
     </form>
 
@@ -45,10 +48,13 @@
         if($brKolona>0 && $brReda>0)
         {
             echo '<table class="tabela">';
-            for($i=0; $i<$brReda; $i++)
+            for($i=1; $i<=$brReda; $i++)
             {
-                echo "<tr>";
-                for($j=0; $j<$brKolona; $j++)
+                if($i % 2 == 0)
+                    echo "<tr>";
+                else
+                    echo '<tr class="color">';
+                for($j=1; $j<=$brKolona; $j++)
                 {
                     echo "<td></td>";
                 }
