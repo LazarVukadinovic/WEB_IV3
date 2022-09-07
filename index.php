@@ -14,5 +14,7 @@
 
     <h2>Rad sa casa 07.09.2022.</h2>
     <a href="niz.php">Primer 1</a>
+    <br>
+    <a href="kreirajTabelu.php">Primer 2</a>
 </body>
 </html>
