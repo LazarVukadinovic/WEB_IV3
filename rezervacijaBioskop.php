@@ -35,10 +35,10 @@
             </select>
             <select name="izaberiMesto" id="izaberiMesto">
                 <?php 
-                    $broj = rand(5,10);
-                    for($i=0; $i<$broj; $i++)
+                    $sedista = array(rand(1,70), rand(1,70), rand(1,70), rand(1,70), rand(1,70));
+                    for($i=0; $i<count($sedista); $i++)
                     {
-                        echo '<option value="film' . $i . '">' . rand(1,70) .'</option>';
+                        echo '<option value="film' . $i . '">' . $sedista[$i] .'</option>';
                     }
                 ?>
             </select>
