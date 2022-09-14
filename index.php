@@ -18,5 +18,9 @@
     <a href="kreirajTabelu.php">Primer 2</a>
     <br>
     <a href="rezervacijaBioskop.php">Bioskop</a>
+    <hr>
+
+    <h2>Rad sa casa 14.09.2022.</h2>
+    <a href="upload.php">Upload</a>
 </body>
 </html>
