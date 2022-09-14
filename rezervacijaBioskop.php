@@ -16,7 +16,6 @@
             $filmovi = array("Juzni Vetar Ubrzanje", "Tesna Koza", "Titanik");
 
             $imeREG = "/([A-Za-z ])/";
-            $sedistaREG = "/^([0-9 ,])+$/";
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (empty($_POST["ime"])) {
@@ -62,10 +61,6 @@
                 } else {
                     $sedistaErr = "";
                   $sedista = test_input($_POST["sedista"]);
-                  if(!filter_var($sedista, $sedistaREG))
-                  {
-                    $sedistaErr = "Mozete uneti brojeve, zarez i razmak";
-                  }
                 }
               }
               
@@ -76,7 +71,12 @@
                 return $data;
               }
 
-
+              if($name && $email && $film && $termin && $sedista)
+              {
+                $myfile = fopen("rezervacija.txt", "w");
+                fwrite($myfile, "Izvrsena je rezervacija na ime '" . $name . "' za film '" . $film . "' u terminu '" . $termin . "'.\n Broj sedista je: " . $sedista);
+                fclose($myfile);
+              }
 
         ?>
         <h1 style="text-align: center;">Rezervacija bioskopske karte</h1>
@@ -93,16 +93,16 @@
             <select name="izaberiFilm" id="izaberiFilm"> 
                 <?php 
                     for($i=0; $i<count($filmovi); $i++)
-                    echo '<option value="film' . $i . '">' . $filmovi[$i] .'</option>';
+                    echo '<option value="' . $filmovi[$i] .'">' . $filmovi[$i] .'</option>';
                 ?>
                 
             </select> <span class="error">* <?php echo $filmErr;?></span>
             <br>
             <label for="izaberiTermin">Termin</label>
             <select name="izaberiTermin" id="izaberiTermin"> 
-                <option value="vreme0">16h</option>
-                <option value="vreme1">18h</option>
-                <option value="vreme2">20h</option>
+                <option value="16h">16h</option>
+                <option value="18h">18h</option>
+                <option value="20h">20h</option>
             </select><span class="error">* <?php echo $terminErr;?></span>
             <br>
             <label for="sedista">Broj sedista</label> 
