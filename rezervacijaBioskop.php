@@ -74,7 +74,7 @@
               if($name && $email && $film && $termin && $sedista)
               {
                 $myfile = fopen("rezervacija.txt", "w");
-                fwrite($myfile, "Izvrsena je rezervacija na ime '" . $name . "' za film '" . $film . "' u terminu '" . $termin . "'.\n Broj sedista je: " . $sedista);
+                fwrite($myfile, "Izvrsena je rezervacija na ime '" . $name . "' za film '" . $film . "' u terminu '" . $termin . "'.\nBroj sedista je: " . $sedista);
                 fclose($myfile);
               }
 

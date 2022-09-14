@@ -1,2 +1,2 @@
-Izvrsena je rezervacija na ime 'Lazar' za film 'Juzni Vetar Ubrzanje' u terminu '18h'.
- Broj sedista je: 34, 45
+Izvrsena je rezervacija na ime 'Lazar' za film 'Juzni Vetar Ubrzanje' u terminu '20h'.
+Broj sedista je: 34
