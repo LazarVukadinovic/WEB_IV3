@@ -29,6 +29,6 @@
     <hr>
 
     <h2>Rad sa casa 28.09.2022.</h2>
-    <a href="#"></a>
+    <a href="mailing.php">Slanje maila</a>
 </body>
 </html>
