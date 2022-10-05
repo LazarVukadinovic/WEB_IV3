@@ -46,6 +46,8 @@
             <br>
             <input type="submit">
         </form>
+        <br><br>
+        <a href="/" onclick="<?php session_destroy(); ?>">Napusti sajt</a>
 
     </body>
 </html>
