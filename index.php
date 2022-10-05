@@ -30,5 +30,9 @@
 
     <h2>Rad sa casa 28.09.2022.</h2>
     <a href="mailing.php">Slanje maila</a>
+    <hr>
+
+    <h2>Rad sa casa 05.10.2022.</h2>
+    <a href="kviz.php">Kviz</a>
 </body>
 </html>
