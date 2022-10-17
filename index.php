@@ -34,5 +34,9 @@
 
     <h2>Rad sa casa 05.10.2022.</h2>
     <a href="kviz.php">Kviz</a>
+    <hr>
+
+    <h2>Rad sa casa 17.10.2022.</h2>
+    <a href="/login/home.php">Login</a>
 </body>
 </html>
