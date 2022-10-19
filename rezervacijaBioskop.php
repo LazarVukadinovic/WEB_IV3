@@ -5,8 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bioskop Online</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <style>
             .error {color: #FF0000;}
+            input, select{
+              max-width: 500px;
+            }
         </style>
     </head>
     <body>
@@ -16,6 +20,12 @@
             $filmovi = array("Juzni Vetar Ubrzanje", "Tesna Koza", "Titanik");
 
             $imeREG = "/([A-Za-z ])/";
+
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "bioskop";
+            $conn = new mysqli($servername, $username, $password, $dbname);
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (empty($_POST["ime"])) {
@@ -76,39 +86,49 @@
                 $myfile = fopen("rezervacija.txt", "w");
                 fwrite($myfile, "Izvrsena je rezervacija na ime '" . $name . "' za film '" . $film . "' u terminu '" . $termin . "'.\nBroj sedista je: " . $sedista);
                 fclose($myfile);
+                $sql = "INSERT INTO rezervacije (ime, film, termin, sedista)
+                VALUES('$name', '$film', '$termin', '$sedista')";
+                if ($conn->query($sql) === TRUE) {
+                  echo "";
+                } else {
+                  echo "Error: " . $sql . "<br>" . $conn->error;
+                }
               }
 
         ?>
-        <h1 style="text-align: center;">Rezervacija bioskopske karte</h1>
+        <div class="container">
+          <h1 class="text-center mb-3">Rezervacija bioskopske karte</h1>
 
-        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+          <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-            <label for="ime">Ime: </label>
-            <input type="text" name="ime"> <span class="error">* <?php echo $nameErr;?></span>
-            <br>
-            <label for="email">Email: </label>
-            <input type="text" name="email"> <span class="error">* <?php echo $emailErr;?></span>
-            <br>
-            <label for="izaberiFilm">Film</label>
-            <select name="izaberiFilm" id="izaberiFilm"> 
-                <?php 
-                    for($i=0; $i<count($filmovi); $i++)
-                    echo '<option value="' . $filmovi[$i] .'">' . $filmovi[$i] .'</option>';
-                ?>
-                
-            </select> <span class="error">* <?php echo $filmErr;?></span>
-            <br>
-            <label for="izaberiTermin">Termin</label>
-            <select name="izaberiTermin" id="izaberiTermin"> 
-                <option value="16h">16h</option>
-                <option value="18h">18h</option>
-                <option value="20h">20h</option>
-            </select><span class="error">* <?php echo $terminErr;?></span>
-            <br>
-            <label for="sedista">Broj sedista</label> 
-            <input type="text" name="sedista"> <span class="error">* <?php echo $sedistaErr;?></span>
-            <br>
-            <input type="submit" value="Rezervisi">
-        </form>
+              <label class="form-label" for="ime">Ime: </label>
+              <input class="form-control" type="text" name="ime"> <span class="error">* <?php echo $nameErr;?></span>
+              <br>
+              <label class="form-label" for="email">Email: </label>
+              <input class="form-control" type="text" name="email"> <span class="error">* <?php echo $emailErr;?></span>
+              <br>
+              <label class="form-label" for="izaberiFilm">Film</label>
+              <select class="form-control" name="izaberiFilm" id="izaberiFilm"> 
+                  <?php 
+                      for($i=0; $i<count($filmovi); $i++)
+                      echo '<option value="' . $filmovi[$i] .'">' . $filmovi[$i] .'</option>';
+                  ?>
+                  
+              </select> <span class="error">* <?php echo $filmErr;?></span>
+              <br>
+              <label for="izaberiTermin">Termin</label>
+              <select class="form-control" name="izaberiTermin" id="izaberiTermin"> 
+                  <option value="16h">16h</option>
+                  <option value="18h">18h</option>
+                  <option value="20h">20h</option>
+              </select><span class="error">* <?php echo $terminErr;?></span>
+              <br>
+              <label class="form-label" for="sedista">Broj sedista</label> 
+              <input class="form-control" type="text" name="sedista"> <span class="error">* <?php echo $sedistaErr;?></span>
+              <br>
+              <input class="btn btn-primary" type="submit" value="Rezervisi">
+          </form>
+        </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </body>
 </html>
