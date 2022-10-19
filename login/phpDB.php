@@ -7,4 +7,4 @@
     }
 ?>
 
-<h1>aa</h1>
+<h1>Druga strana</h1>
