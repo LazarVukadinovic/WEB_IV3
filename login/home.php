@@ -9,6 +9,7 @@
 
     $_SESSION["user"] = "";
     $_SESSION["userPassword"] = "";
+    $_SESSION["loggedIn"] = 0;
 
 ?>
 
@@ -72,6 +73,7 @@
                         if($row["username"] == $_SESSION["user"] && $row["password"] == $_SESSION["userPassword"])
                         {
                             $k = 1;
+                            $_SESSION["loggedIn"] = 1;
                             header('Location: http://nemanaziv.com/login/phpDB.php');
                             break;
                         }
