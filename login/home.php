@@ -30,7 +30,7 @@
         <div class="container">
             <h1 class="text-center mt-3">Login page</h1>
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="text-center mt-5">
-                <label class="mt-2" for="username">Username: </label>  
+            <label class="mt-2" for="username">Username: </label>  
                 <input class="mt-1" type="text" name="username"> <span class="error">* <?php echo $userErr;?></span>
                 <br>
                 <label class="mt-2" for="password">Password: </label> 
