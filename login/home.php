@@ -2,7 +2,7 @@
     session_start();
     include "./connection.php";
 
-    if($_SESSION["loggedIn"] == 1)
+    if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == 1)
     {
         $_SESSION["user"] = "";
         $_SESSION["userPassword"] = "";
