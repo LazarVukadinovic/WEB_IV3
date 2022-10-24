@@ -11,6 +11,9 @@
             input, select{
               max-width: 500px;
             }
+            table, th, td {
+              border: 1px solid;
+            }
         </style>
     </head>
     <body>
@@ -97,7 +100,7 @@
 
         ?>
         <div class="container">
-          <h1 class="text-center mb-3">Rezervacija bioskopske karte</h1>
+          <h1 class="text-center mb-3 mt-4">Rezervacija bioskopske karte</h1>
           <a class="btn btn-secondary" href="./bioskopKarte.php">Prikazi karte</a>
 
           <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
