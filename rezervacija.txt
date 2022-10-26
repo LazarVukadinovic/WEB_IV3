@@ -1,2 +1,2 @@
-Izvrsena je rezervacija na ime 'Lazar' za film 'Titanik' u terminu '20h'.
-Broj sedista je: 31, 45
+Izvrsena je rezervacija na ime 'dfgfdg' za film 'Juzni Vetar Ubrzanje' u terminu '16h'.
+Broj sedista je: 11

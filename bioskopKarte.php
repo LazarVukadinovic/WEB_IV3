@@ -47,11 +47,11 @@
           $sqlDelete = "DELETE FROM rezervacije WHERE id = " . $record;
           $conn->query($sqlDelete);
           $record = "";
-          header("http://nemanaziv.com/bioskopKarte.php");
+          echo "<script>location.reload();</script>";
         }
       }
     ?>
-    <a href="http://nemanaziv.com/rezervacijaBioskop.php"></a>
+    <a class="btn btn-success" href="http://nemanaziv.com/rezervacijaBioskop.php">Vrati se</a>
     <div class="container mt-4">
       <div class="row">
         <div class="col">
