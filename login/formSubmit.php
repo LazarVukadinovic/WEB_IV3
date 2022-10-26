@@ -1,6 +1,6 @@
 <?php 
 include "./connection.php";
-    $userErr = $userPasswordErr = "";
+    $userErr = $userPasswordErr = $userRPasswordErr = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -23,6 +23,22 @@ include "./connection.php";
             $_SESSION["userPassword"] = test_input($_POST["password"]);
             $userPasswordErr = "";
         }
+        if(isset($_POST["rpassword"]) && empty($_POST["rpassword"]))
+        {
+            $userRPasswordErr = "Morate ponovo uneti password";
+        }
+        else
+        {
+            $rpassword = test_input($_POST["rpassword"]);
+            if($rpassword == $password)
+            {
+                $userPasswordErr = "";
+                $rpassword = "";
+            }
+            else
+                $userRPasswordErr = "Morate ponovo uneti password";
+        }
+
     }
 
     function test_input($data) {
@@ -32,21 +48,6 @@ include "./connection.php";
         return $data;
     }
 
-    if(!empty($_SESSION["user"]) && !empty($_SESSION["userPassword"]))
-    {
-        $sql = "SELECT username, password FROM loginInfo WHERE username = '" . $_SESSION["user"] . "' AND password = '" . $_SESSION["userPassword"] . "'";
-        $result = $conn->query($sql);
-        $row = $result->fetch_assoc();
 
-
-        if ($result->num_rows > 0) {
-            if($row["username"] == $_SESSION["user"] && $row["password"] == $_SESSION["userPassword"])
-            {
-               $_SESSION["loggedIn"] = 1;
-                header('Location: http://nemanaziv.com/login/phpDB.php');
-            }
-            else
-                echo "<script>alert('Nema vaseg naloga');</script>";
-        }
-    }
+    
 ?>
