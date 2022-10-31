@@ -27,7 +27,7 @@ include "./connection.php";
         {
             $userRPasswordErr = "Morate ponovo uneti password";
         }
-        else
+        else if("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == "http://nemanaziv.com/login/signUP.php")
         {
             $rpassword = test_input($_POST["rpassword"]);
             if($rpassword == $password)

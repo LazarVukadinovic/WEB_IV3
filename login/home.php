@@ -8,7 +8,6 @@
         $_SESSION["userPassword"] = "";
         $_SESSION["loggedIn"] = 0;
     }
-    $page = 1;
 ?>
 
 <!DOCTYPE html>
@@ -44,13 +43,13 @@
         <?php 
             if(!empty($_SESSION["user"]) && !empty($_SESSION["userPassword"]))
             {
-                $sql = "SELECT username, password FROM loginInfo WHERE username = '" . $_SESSION["user"] . "' AND password = '" . $_SESSION["userPassword"] . "'";
+                $sql = "SELECT username, password FROM loginInfo WHERE username = '" . $_SESSION["user"] . "'";
                 $result = $conn->query($sql);
                 $row = $result->fetch_assoc();
         
         
                 if ($result->num_rows > 0) {
-                    if($row["username"] == $_SESSION["user"] && $row["password"] == $_SESSION["userPassword"])
+                    if($row["username"] == $_SESSION["user"] && password_verify($_SESSION["userPassword"], $row["password"]))
                     {
                        $_SESSION["loggedIn"] = 1;
                         header('Location: http://nemanaziv.com/login/phpDB.php');
