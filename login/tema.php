@@ -2,12 +2,10 @@
     date_default_timezone_set('Europe/Belgrade');
     session_start();
     include "./connection.php";
-    $dbname = "loginData";
-    $conn = new mysqli($servername, $username, $password, $dbname);
 
-    if($_SESSION["loggedIn"] == 0)
+    if(isset($_SESSION["loggedIn"])  && $_SESSION["loggedIn"] == 0)
     {
-        header('Location: http://nemanaziv.com/login/home.php');
+        header('Location: http://nemanaziv.com/login/index.php');
     }
 ?>
 
@@ -22,6 +20,7 @@
         <title>Druga strana</title>
     </head>
     <body>
+        <a href="./index.php" class="btn btn-primary" >Home</a>
         <div class="container">
             <h1 class="text-center mt-4">Kreiraj temu</h1>
 

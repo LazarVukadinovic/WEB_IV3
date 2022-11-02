@@ -2,13 +2,6 @@
     session_start();
     include "./connection.php";
 
-    if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == 1)
-    {
-        $_SESSION["user"] = "";
-        $_SESSION["userPassword"] = "";
-        $_SESSION["loggedIn"] = 0;
-    }
-    $page = 1;
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +19,8 @@
     </head>
     <body>
         <?php include "./formSubmit.php";?>
-        <a href="./home.php" class="btn btn-primary" >Prijavi se</a>
+        <a href="./index.php" class="btn btn-primary" >Home</a>
+        <a href="./index.php" class="btn btn-primary" >Prijavi se</a>
         <a href="./signUP.php" class="btn btn-primary">Registruj se</a>
         <div class="container">
             <h1 class="text-center mt-3">Sign up page</h1>
@@ -64,7 +58,7 @@
                     VALUES("' . $user . '", "' . password_hash($password, PASSWORD_BCRYPT) . '")';
                     $conn->query($sqlInsert);
                     $_SESSION["loggedIn"] = 1;
-                    header('Location: http://nemanaziv.com/login/home.php');
+                    header('Location: http://nemanaziv.com/login/index.php');
                 }
             }
         ?>

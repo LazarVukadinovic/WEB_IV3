@@ -2,12 +2,6 @@
     session_start();
     include "./connection.php";
 
-    if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == 1)
-    {
-        $_SESSION["user"] = "";
-        $_SESSION["userPassword"] = "";
-        $_SESSION["loggedIn"] = 0;
-    }
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +19,8 @@
     </head>
     <body>
         <?php include "./formSubmit.php";?>
-        <a href="./home.php" class="btn btn-primary" >Prijavi se</a>
+        <a href="./index.php" class="btn btn-primary" >Home</a>
+        <a href="./index.php" class="btn btn-primary" >Prijavi se</a>
         <a href="./signUP.php" class="btn btn-primary">Registruj se</a>
         <div class="container">
             <h1 class="text-center mt-3">Login page</h1>
@@ -51,8 +46,8 @@
                 if ($result->num_rows > 0) {
                     if($row["username"] == $_SESSION["user"] && password_verify($_SESSION["userPassword"], $row["password"]))
                     {
-                       $_SESSION["loggedIn"] = 1;
-                        header('Location: http://nemanaziv.com/login/tema.php');
+                        $_SESSION["loggedIn"] = 1;
+                        header('Location: http://nemanaziv.com/login/index.php');
                     }
                     else
                         echo "<script>alert('Nema vaseg naloga');</script>";
