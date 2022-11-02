@@ -52,7 +52,7 @@
                     if($row["username"] == $_SESSION["user"] && password_verify($_SESSION["userPassword"], $row["password"]))
                     {
                        $_SESSION["loggedIn"] = 1;
-                        header('Location: http://nemanaziv.com/login/phpDB.php');
+                        header('Location: http://nemanaziv.com/login/tema.php');
                     }
                     else
                         echo "<script>alert('Nema vaseg naloga');</script>";
