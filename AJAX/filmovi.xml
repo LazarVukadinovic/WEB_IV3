@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="filmovi.xsl"?>
+<katalog>
+  <film>
+    <naziv>Titanik</naziv>
+    <zanr>Drama</zanr>
+    <godina>1997</godina>
+  </film>
+  <film>
+    <naziv>John Wick</naziv>
+    <zanr>Akcioni</zanr>
+    <godina>2014</godina>
+  </film>
+  <film>
+    <naziv>Turista</naziv>
+    <zanr>Drama</zanr>
+    <godina>2010</godina>
+  </film>
+  <film>
+    <naziv>Hitman</naziv>
+    <zanr>Akcioni</zanr>
+    <godina>2007</godina>
+  </film>
+  <film>
+    <naziv>Lucy</naziv>
+    <zanr>Triler</zanr>
+    <godina>2014</godina>
+  </film>
+
+</katalog>

@@ -38,5 +38,9 @@
 
     <h2>Rad sa casa 17.10.2022.</h2>
     <a href="/login/home.php">Login</a>
+    <hr>
+
+    <h2>Rad sa casa 01.02.2023.</h2>
+    <a href="./AJAX/autosugestion.php">AJAX sugestije</a>
 </body>
 </html>
