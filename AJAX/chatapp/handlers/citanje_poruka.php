@@ -1,6 +1,6 @@
 <?php 
 
-    require_once("connection.php");
+    require_once("../database/connection.php");
 
     $sql = "SELECT * FROM chat_poruke ORDER BY id ASC";
     $result = mysqli_query($conn, $sql);

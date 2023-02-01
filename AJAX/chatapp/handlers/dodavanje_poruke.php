@@ -1,6 +1,6 @@
 <?php 
 
-    include_once('connection.php');
+    include_once('../database/connection.php');
 
     $poruka_paket = json_decode($_GET['p'], false);
     $tekst_poruke = $poruka_paket->tekst_poruke;
