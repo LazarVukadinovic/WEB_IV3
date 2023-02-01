@@ -39,7 +39,7 @@
         </select>
     </form>
     <br>
-    <div id="txtHint">Customer info will be listed here...</div>
+    <div id="txtHint"></div>
         
     <script>
         function showCustomer(str) {
