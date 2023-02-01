@@ -42,5 +42,7 @@
 
     <h2>Rad sa casa 01.02.2023.</h2>
     <a href="./AJAX/autosugestion.php">AJAX sugestije</a>
+    <br>
+    <a href="./AJAX/ajax_baza.php">AJAX baza</a>
 </body>
 </html>
