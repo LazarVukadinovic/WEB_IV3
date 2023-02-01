@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>AJAX i baze</title>
         <style>
             th,td {
             padding: 5px;
@@ -21,7 +21,7 @@
     </head>
     <body>
 
-    <h2>The XMLHttpRequest Object</h2>
+    <h2>Podaci preko select polja</h2>
 
     <form action=""> 
         <select name="customers" onchange="showCustomer(this.value)">
