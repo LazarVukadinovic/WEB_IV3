@@ -44,5 +44,7 @@
     <a href="./AJAX/autosugestion.php">AJAX sugestije</a>
     <br>
     <a href="./AJAX/ajax_baza.php">AJAX baza</a>
+    <br>
+    <a href="./AJAX/chatapp/index.php">CHAT app</a>
 </body>
 </html>
