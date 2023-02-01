@@ -2,7 +2,7 @@
 
     require_once("../database/connection.php");
 
-    $sql = "SELECT * FROM chat_poruke ORDER BY id ASC";
+    $sql = "SELECT * FROM chat_poruke ORDER BY vreme DESC";
     $result = mysqli_query($conn, $sql);
 
     $response = "";

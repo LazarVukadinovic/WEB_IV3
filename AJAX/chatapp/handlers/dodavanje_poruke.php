@@ -16,8 +16,8 @@
     $vreme_poruke = date("H:i:s");
     $vremeDB = "$datum_poruke $vreme_poruke";
 
-    $id_korisnika = 419;
-    $korisnicko_ime = "cane15";
+    $id_korisnika = 1312;
+    $korisnicko_ime = "cviga";
 
     $sql = "INSERT INTO chat_poruke (id_korisnika, korisnicko_ime, tekst_poruke, vreme)
     VALUES('$id_korisnika', '$korisnicko_ime', '$tekst_poruke', '$vremeDB')";
