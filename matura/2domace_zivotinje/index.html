@@ -19,35 +19,43 @@
             <div class="row">
                 <div class="col">
                     <ul class="text-center">
-                        <a href="#"><li>Pocetna</li></a>
-                        <a href="#"><li>O Autoru</li></a>
-                        <a href="#"><li>Uputstvo</li></a>
+                        <a href="index.html"><li class="activate">Pocetna</li></a>
+                        <a href="./pages/about.html"><li>O Autoru</li></a>
+                        <a href="./pages/uputstvo.html"><li>Uputstvo</li></a>
                     </ul>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col">
-                    <a href="#"><img src="./images/pas.jpg" alt="" onmouseover="PlaySound('audio4')" 
+                    <a onclick="window.open('./pages/zivotinje/pas.html', '_blank', 'location=yes,height=470,width=520,scrollbars=yes,status=yes');"><img src="./images/pas.jpg" alt="" onmouseover="PlaySound('audio4')" 
                         onmouseout="StopSound('audio4')"></a>
                 </div>
                 <div class="col">
-                    <a href="#"><img src="./images/patka.jpg" alt="" onmouseover="PlaySound('audio2')" 
+                    <a onclick="window.open('./pages/zivotinje/patka.html', '_blank', 'location=yes,height=470,width=520,scrollbars=yes,status=yes');"><img src="./images/patka.jpg" alt="" onmouseover="PlaySound('audio2')" 
                         onmouseout="StopSound('audio2')"></a>
                 </div>
                 <div class="col">
-                    <a href="#"><img src="./images/macka.jpg" alt="" onmouseover="PlaySound('audio5')" 
+                    <a onclick="window.open('./pages/zivotinje/macka.html', '_blank', 'location=yes,height=470,width=520,scrollbars=yes,status=yes');"><img src="./images/macka.jpg" alt="" onmouseover="PlaySound('audio5')" 
                         onmouseout="StopSound('audio5')"></a>
                 </div>
                 <div class="col">
-                    <a href="#"><img src="./images/pile.jpg" alt="" onmouseover="PlaySound('audio3')" 
+                    <a onclick="window.open('./pages/zivotinje/pile.html', '_blank', 'location=yes,height=470,width=520,scrollbars=yes,status=yes');"><img src="./images/pile.jpg" alt="" onmouseover="PlaySound('audio3')" 
                         onmouseout="StopSound('audio3')"></a>
                 </div>
                 <div class="col">
-                    <a href="#"><img src="./images/krava.jpg" alt="" onmouseover="PlaySound('audio1')" 
+                    <a onclick="window.open('./pages/zivotinje/krava.html', '_blank', 'location=yes,height=470,width=520,scrollbars=yes,status=yes');"><img src="./images/krava.jpg" alt="" onmouseover="PlaySound('audio1')" 
                         onmouseout="StopSound('audio1')"></a>
                 </div>
             </div>
         </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <p class="text-center">Copyright &copy; Predskolska Ustanova 'Srecno dete'</p>
+                </div>
+            </div>
+        </footer>
         
         <audio id="audio1" src="./sounds/krava.mp3"></audio>
         <audio id="audio2" src="./sounds/patka.mp3"></audio>
