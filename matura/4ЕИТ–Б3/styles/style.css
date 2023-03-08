@@ -8,13 +8,12 @@ body{
     background-color: #FEFA99;
 }
 
-h1, h5{
+h1, h5, h2{
     color: #50752D;
 }
 
 h2{
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+    font-size: 42px;
 }
 
 nav{
@@ -39,4 +38,73 @@ a{
 .activate{
     background-color: #487F2E;
     color: #FEFA99;
+}
+
+img{
+    width: 100%;
+    height: 580px;
+}
+
+.drzava-wrapper {
+    left: 0;
+    top: 0;
+    width: 100px !important;
+}
+
+.drzava-wrapper img {
+    width: 50px;
+    height: 25px;
+}
+
+.srbija {
+    top: 200px;
+    right: 375px;
+    left: auto;
+}
+
+.madjarska {
+    top: 5px;
+    left: 30px;
+}
+
+.rumunija {
+    left: auto;
+    top: 85px;
+    right: 150px;
+}
+
+.bugarska {
+    top: 450px;
+    left: auto;
+    right: 0;
+}
+
+.makedonija {
+    left: auto;
+    top: 520px;
+    right: 100px;
+}
+
+.albanija {
+    left: auto;
+    top: 500px;
+    right: 475px;
+}
+
+.cg {
+    left: auto;
+    top: 400px;
+    right: 580px;
+}
+
+.bosna {
+    left: 30px;
+    top: 280px;
+    right: auto;
+}
+
+.hrvatska {
+    left: 15px;
+    top: 105px;
+    right: auto;
 }
