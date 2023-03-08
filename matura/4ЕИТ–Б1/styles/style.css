@@ -5,16 +5,17 @@
 }
 
 body{
-    background-color: lightblue;
+    background-color: #B4D9EB;
 }
 
 h1{
     margin-left: 10px;
+    color: #2B5480;
 }
 
 nav{
     width: 100%;
-    background-color: #241185;
+    background-color: #2B5480;
 }
 
 nav span{
@@ -47,7 +48,7 @@ a{
 }
 
 .tekst{
-    background-color: #241185;
+    background-color: #2B5480;
     color: #fff;
     height: 118px;
     overflow-y: scroll
