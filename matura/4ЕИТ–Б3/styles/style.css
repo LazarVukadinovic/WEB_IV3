@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FEFA99;
+}
+
+h1, h5{
+    color: #50752D;
+}
+
+h2{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+nav{
+    width: 100%;
+    background-color: #C4FEA9;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline-block;
+    padding: 10px 70px;
+}
+
+a{
+    text-decoration: none;
+    color: #50752D;
+}
+
+.activate{
+    background-color: #487F2E;
+    color: #FEFA99;
+}
