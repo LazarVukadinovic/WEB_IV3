@@ -13,19 +13,23 @@ body{
     min-height: 100vh;
 }
 
+h1{
+    color: #F1F19B;
+}
+
 ul{
     list-style: none;
 }
 
 li{
     display: inline-block;
-    background-color: yellowgreen;
+    background-color: #F1F19B;
     padding: 5px 50px;
 }
 
 a{
     text-decoration: none;
-    color: yellow;
+    color: #3C1826;
 }
 
 img{
@@ -47,5 +51,9 @@ footer p{
 }
 
 .activate{
-    background-color: #220000 !important;
+    background-color: #3C1826 !important;
+}
+
+a>.activate{
+    color: #F1F19B;
 }
