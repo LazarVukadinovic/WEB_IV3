@@ -6,6 +6,9 @@
 
 body{
     background-color: #FEFA99;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h5, h2{
@@ -42,7 +45,7 @@ a{
 
 img{
     width: 100%;
-    height: 580px;
+    height: 700px;
 }
 
 .drzava-wrapper {
@@ -57,9 +60,8 @@ img{
 }
 
 .srbija {
-    top: 200px;
-    right: 375px;
-    left: auto;
+    top: 50%;
+    left: 50%;
 }
 
 .madjarska {
@@ -74,27 +76,30 @@ img{
 }
 
 .bugarska {
-    top: 450px;
+    top: auto;
     left: auto;
+    bottom: 100px;
     right: 0;
 }
 
 .makedonija {
     left: auto;
-    top: 520px;
-    right: 100px;
+    top: auto;
+    bottom: 0px;
+    right: 150px;
 }
 
 .albanija {
-    left: auto;
-    top: 500px;
-    right: 475px;
+    left: 200px;
+    bottom: 10px;
+    top: auto;
+    right: auto;
 }
 
 .cg {
-    left: auto;
-    top: 400px;
-    right: 580px;
+    left: 50px;
+    top: 500px;
+    right: auto;
 }
 
 .bosna {
@@ -107,4 +112,13 @@ img{
     left: 15px;
     top: 105px;
     right: auto;
+}
+
+footer{
+    margin-top: auto;
+}
+
+footer p{
+    margin: 0;
+    padding: 10px;
 }

@@ -24,16 +24,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
-                    <h2>Г</h2>
-                    <h2>е</h2>
-                    <h2>о</h2>
-                    <h2>г</h2>
-                    <h2>р</h2>
-                    <h2>а</h2>
-                    <h2>ф</h2>
-                    <h2>и</h2>
-                    <h2>ј</h2>
-                    <h2>а</h2>
+                    <div class="m-auto mt-5">
+                      <h2>Г</h2>
+                      <h2>е</h2>
+                      <h2>о</h2>
+                      <h2>г</h2>
+                      <h2>р</h2>
+                      <h2>а</h2>
+                      <h2>ф</h2>
+                      <h2>и</h2>
+                      <h2>ј</h2>
+                      <h2>а</h2>
+                    </div>
                 </div>
                 <div class="col-md-8 position-relative">
                     <img src="./images/srbija.jpg">
@@ -41,8 +43,6 @@
                         <img
                         id="img1"
                           src="./images/srbija zastava.jpg"
-                          onmouseover="PlaySound('audio1')" 
-                        onmouseout="StopSound('audio1')"
                         />
                         <p id="p1">Srbija</p>
                       </div>
@@ -50,9 +50,6 @@
                         <img
                         id="img2"
                           src="./images/madjarska.jpg"
-                          alt=""
-                          onmouseover="PlaySound('audio2')" 
-                        onmouseout="StopSound('audio2')"
                         />
                         <p id="p2">Madjarska</p>
                       </div>
@@ -60,9 +57,6 @@
                         <img
                         id="img3"
                           src="./images/rumunija.jpg"
-                          alt=""
-                          onmouseover="PlaySound('audio3')" 4
-                        onmouseout="StopSound('audio3')"
                         />
                         <p id="p3">Rumunija</p>
                       </div>
@@ -70,9 +64,6 @@
                         <img
                         id="img4"
                           src="./images/bugarska.jpg"
-                          alt=""
-                          onmouseover="PlaySound('audio4')" 
-                        onmouseout="StopSound('audio4')"
                         />
                         <p id="p4">Bugarska</p>
                       </div>
@@ -80,9 +71,6 @@
                         <img
                         id="img5"
                           src="./images/makedonija.jpg"
-                          alt=""
-                          onmouseover="PlaySound('audio5')" 
-                        onmouseout="StopSound('audio5')"
                         />
                         <p id="p5">Makedonija</p>
                       </div>
@@ -90,9 +78,6 @@
                         <img
                         id="img6"
                           src="./images/albanija.jpg"
-                          alt=""
-                          onmouseover="PlaySound('audio6')" 
-                        onmouseout="StopSound('audio6')"
                         />
                         <p id="p6">Albanija</p>
                       </div>
@@ -100,9 +85,6 @@
                         <img
                         id="img7"
                           src="./images/crna gora.jpg"
-                          alt=""
-                          onmouseover="PlaySound('audio7')" 
-                        onmouseout="StopSound('audio7')"
                         />
                         <p id="p7">Crna Gora</p>
                       </div>
@@ -110,9 +92,6 @@
                         <img
                         id="img8"
                           src="./images/bosna.jpg"
-                          alt=""
-                          onmouseover="PlaySound('audio8')" 
-                        onmouseout="StopSound('audio8')"
                         />
                         <p id="p8">BiH</p>
                       </div>
@@ -120,15 +99,20 @@
                         <img
                             id="img9"
                           src="./images/hrvatska.jpg"
-                          alt=""
-                          onmouseover="PlaySound('audio9')" 
-                        onmouseout="StopSound('audio9')"
                         />
                         <p id="p9">Hrvatska</p>
                       </div>
                 </div>
             </div>
         </div>
+
+        <footer class="activate">
+          <div class="container">
+              <div class="row">
+                  <p class="text-center">Copyright &copy; Predskolska Ustanova 'Srecno dete'</p>
+              </div>
+          </div>
+      </footer>
 
         <audio id="audio1" src="./sounds/srbija.mp3"></audio>
         <audio id="audio2" src="./sounds/madjarska.mp3"></audio>
@@ -137,7 +121,7 @@
         <audio id="audio5" src="./sounds/makedonija.mp3"></audio>
         <audio id="audio6" src="./sounds/albanija.mp3"></audio>
         <audio id="audio7" src="./sounds/crnagora.mp3"></audio>
-        <audio id="audio8" src="./sounds/bih.mp3"></audio>
+        <audio id="audio8" src="./sounds/bosna.mp3"></audio>
         <audio id="audio9" src="./sounds/hrvatska.mp3"></audio>
 
         <script src="./script/script.js"></script>
