@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.naslovna_traka{
+    width: 100%;
+    background-color: #4B6C9D;
+    color: #fff;
+    padding: 7px 0 7px 15px;
+}
+
+nav{
+    background-color: #3A4F63;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+nav ul li{
+    padding: 5px 20px;
+    display: inline-block;
+    background-color: #465C71;
+    color: #fff;
+    border: 1px solid #4E667D;
+}
+
+
+li:hover{
+    text-decoration: underline;
+}
+
+label{
+    color: #666666;
+}
+
+.dugme{
+    width: 250px;
+} 
+
+footer{
+    background-color: #B6B7BC;
+    margin-top: auto;
+}
+
+footer p{
+    margin: 0;
+    color: #735D76;
+    padding: 10px;
+}
