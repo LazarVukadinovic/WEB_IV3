@@ -1,7 +1,7 @@
 //onclick prelaz na novu stranicu
 const vrste = ['zicani', 'zicani', 'specijalne', 'specijalne', 'specijalne', 'duvacki'];
 
-for(let i=0; i<9; i++)
+for(let i=0; i<6; i++)
 {
     document.getElementById('p'+(i+1)).addEventListener('click', function(){
         window.open('./pages/info/' + vrste[i] +'.html','name','width=200, height=400')

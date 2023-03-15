@@ -39,12 +39,12 @@ a{
 }
 
 .naziv{
-    margin-left: 50px;
+    margin-left: 70px;
 }
 
 .activate{
-    background-color: #487F2E;
-    color: #FEFA99;
+    background-color: #487F2E !important;
+    color: #FEFA99 !important;
 }
 
 .slika {
@@ -52,17 +52,32 @@ a{
     width: 50px;
 }
 
+.table p{
+    text-decoration: underline;
+    color: blueviolet;
+    cursor: pointer;
+    margin: 0;
+}
+
 .table td {
     text-align: center;
     vertical-align: middle;
+    padding: 0;
+}
+
+#img1, #img2, #img3, #img4, #img5, #img6{
+    padding-top: 10px;
 }
 
 .table {
-    background-color: #8ce075;
-    width: 350px;
-    height: 200px;
+    background-color: #C4FEA9;
+    width: 450px;
     text-align: center;
     margin: 0px auto;
+}
+
+table{
+    border-collapse: separate !important;
 }
 
 table, th, td {
