@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.naslovna_traka{
+    width: 100%;
+    background-color: #4B6C9D;
+    color: #fff;
+    padding: 7px 0 7px 15px;
+}
+
+nav{
+    background-color: #3A4F63;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+nav ul li{
+    padding: 5px 20px;
+    display: inline-block;
+    background-color: #465C71;
+    color: #fff;
+    border: 1px solid #4E667D;
+}
+
+
+li:hover{
+    text-decoration: underline;
+}
+
+nav ul a{
+    text-decoration: none;
+}
+
+section#forma {
+    padding: 10px;
+    margin: 0 20px;
+}
+
+section#forma h2 {
+    font-size: 18px;
+}
+
+section#forma p {
+    font-size: 14px;
+}
+
+section#forma hr {
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    border: 1px solid;
+    
+}
+
+section#forma  form {
+    width: 500px;
+}
+
+section#forma form fieldset {
+    border: 1px solid #333;
+    padding: 20px;
+}
+
+section#forma  form fieldset .form-control {
+    width: 450px;
+    border: none;
+}
+
+section#forma  form fieldset input[type=text], input[type=password] {
+    width: 450px;
+}
+
+section#forma  form  button {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #333;
+    transition: .2s;
+    margin-top: 20px;
+    width: 100px;
+    text-align: center;
+    /* float: right; */
+}
+section#forma  form  button:hover {
+    color: #fff;
+    background-color: #333;
+
+}
+
+/* ===== tabela ====== */
+table {
+    border: 1px solid black;
+    margin: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* ===== footer ===== */
+
+footer{
+    background-color: #B6B7BC;
+    margin-top: auto;
+}
+
+footer p{
+    margin: 0;
+    color: #735D76;
+    padding: 10px;
+}
