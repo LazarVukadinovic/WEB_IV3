@@ -16,17 +16,17 @@ if (array_key_exists("check", $_POST)) {
         while ($line = $data->fetch_assoc()) {
 
             if ($izbor == "engleski") {
-                if ($Srec == $line["srpska"]) {
-                    $engleskaR = $line["engleska"];
-                    $srpskaR = $line["srpska"];
+                if ($Srec == $line["srpski"]) {
+                    $engleskaR = $line["engleski"];
+                    $srpskaR = $line["srpski"];
                     $opisR = $line["opis"];
                     unset($greska);
                 }
             } else {
 
-                if ($Erec == $line["engleska"]) {
-                    $engleskaR = $line["engleska"];
-                    $srpskaR = $line["srpska"];
+                if ($Erec == $line["engleski"]) {
+                    $engleskaR = $line["engleski"];
+                    $srpskaR = $line["srpski"];
                     $opisR = $line["opis"];
                     unset($greska);
                 }
@@ -52,7 +52,7 @@ if (array_key_exists("check", $_POST)) {
         <h1>ELEKTRONSKI REČNIK</h1>
     </div>
     <div class="navigacija">
-        <a href="./index.php">Rečnik</a>
+        <a href="index.php">Rečnik</a>
         <a href="./dodavanje.php">Dodavanje novih reči</a>
         <a href="./uputstvo.php">Uputstvo</a>
     </div>
@@ -60,17 +60,17 @@ if (array_key_exists("check", $_POST)) {
             echo $greska;
             unset($greska);
         } ?></p>
-    <form action="./index.php" method="post">
+    <form action="index.php" method="post">
         Smer: <select name="izbor" id="izbor">
             <option value="default">Selektuj smer prevodjenja</option>
-            <option value="engleski">Srpski-Engleski</option>
-            <option value="srpski">Engleski-Srpski</option>
+            <option value="engleski">Engleski-Srpski</option>
+            <option value="srpski">Srpski-Engleski</option>
         </select><br>
         Engleska reč <input type="text" value="<?php if (isset($engleskaR)) echo $engleskaR;
                                                 else echo ""; ?>" name="engleska" id="eng"><br>
         Srpska reč <input type="text" value="<?php if (isset($srpskaR)) echo $srpskaR;
                                                 else echo ""; ?>" name="srpska" id="srp"><br><br>
-        Opis: <textarea name="opis" value="" id="opis" cols="30" rows="10"><?php if (isset($opisR)) echo $opisR;
+        Opis: <textarea name="opis" value="" id="opis" cols="30" rows="10" readonly><?php if (isset($opisR)) echo $opisR;
                                                                             else echo ""; ?></textarea><br><br>
         <input type="submit" name="check" value="Prevedi">
     </form>
@@ -79,6 +79,7 @@ if (array_key_exists("check", $_POST)) {
         <p>© Osnovna škola "Sonja Marinkovic"</p>
     </div>
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
