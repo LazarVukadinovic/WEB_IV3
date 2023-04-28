@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .nav {
+    padding: 2px;
+    background-color: #4B6C9D;
+  }
+  
+  .nav h1 {
+    margin: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .navigacija {
+    background-color: #3A4F63;
+    height: 40px;
+    display: flex;
+    padding: 10px 20px 10px 20px;
+  }
+  
+  .navigacija a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    background-color: #465C71;
+    border: 1px solid #4E667D;
+  }
+  
+  form {
+    padding: 20px;
+  }
+  
+  form select,
+  form input {
+    margin-bottom: 10px;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #B6B7BC;
+    color: #735D76;
+    text-align: center;
+  }
+  .autor {
+    margin-top: 20px;
+    padding: 50px;
+    background: white;
+    height: 500px;
+    border: 2px #bf8040;
+    border-radius: 5px;
+    font-family: bold;
+    font-size: 30px;
+    text-align: center;
+  }
+  
