@@ -1,39 +1,49 @@
 <?php
-if (array_key_exists("check", $_POST)) {
-    require_once "./database/connection.php";
-    $Srec = $_POST["srpska"];
-    $Erec = $_POST["engleska"];
-    $opis = $_POST["opis"];
-    $izbor = $_POST["izbor"];
-    $sql = "SELECT * FROM reci";
-    $data = $conn->query($sql);
-    if ($izbor == "default") {
-        $greska = "Morate uneti smer prevodjenja!";
-    } else {
-        $greska = "Ne postoji rec u bazi ili ste izabrali pogrešan smer prevodjenja!";
-    }
-    if ($data->num_rows > 0) {
-        while ($line = $data->fetch_assoc()) {
+    include_once "./database/connection.php";
 
-            if ($izbor == "engleski") {
-                if ($Srec == $line["srpski"]) {
-                    $engleskaR = $line["engleski"];
-                    $srpskaR = $line["srpski"];
-                    $opisR = $line["opis"];
-                    unset($greska);
-                }
-            } else {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                if ($Erec == $line["engleski"]) {
-                    $engleskaR = $line["engleski"];
-                    $srpskaR = $line["srpski"];
-                    $opisR = $line["opis"];
-                    unset($greska);
-                }
+        if (!empty($_POST["engleska"]))
+        {
+            $greska = "";
+            $engleskaR = test_input($_POST["engleska"]);
+            $sql = "SELECT * FROM reci WHERE engleska = '$engleskaR'";
+            $result = $conn->query($sql);
+            
+            if($result->num_rows > 0)
+            {
+                $row = $result->fetch_assoc();
+                $srpskaR = $row['srpska'];
+                $opisR = $row['opis'];
             }
+            else
+            $greska = "Uneta rec ne postoji u recniku";
+            
+        }
+        else if (!empty($_POST["srpska"]))
+        {
+            $greska = "";
+            $srpskaR = test_input($_POST["srpska"]);
+            $sql = "SELECT * FROM reci WHERE srpska = '$srpskaR'";
+            $result = $conn->query($sql);
+            
+            if($result->num_rows > 0)
+            {
+                $row = $result->fetch_assoc();
+                $engleskaR = $row['engleska'];
+                $opisR = $row['opis'];
+            }
+            else
+            $greska = "Uneta rec ne postoji u recniku";
         }
     }
-}
+
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
 
 ?>
 <!DOCTYPE html>
@@ -53,8 +63,8 @@ if (array_key_exists("check", $_POST)) {
     </div>
     <div class="navigacija">
         <a href="index.php">Rečnik</a>
-        <a href="./dodavanje.php">Dodavanje novih reči</a>
-        <a href="./uputstvo.php">Uputstvo</a>
+        <a href="./pages/dodavanje.php">Dodavanje novih reči</a>
+        <a href="./pages/uputstvo.html">Uputstvo</a>
     </div>
     <p><?php if (isset($greska)) {
             echo $greska;
@@ -67,9 +77,9 @@ if (array_key_exists("check", $_POST)) {
             <option value="srpski">Srpski-Engleski</option>
         </select><br>
         Engleska reč <input type="text" value="<?php if (isset($engleskaR)) echo $engleskaR;
-                                                else echo ""; ?>" name="engleska" id="eng"><br>
+                                                else echo ""; ?>" name="engleska" id="eng" readonly><br>
         Srpska reč <input type="text" value="<?php if (isset($srpskaR)) echo $srpskaR;
-                                                else echo ""; ?>" name="srpska" id="srp"><br><br>
+                                                else echo ""; ?>" name="srpska" id="srp" readonly><br><br>
         Opis: <textarea name="opis" value="" id="opis" cols="30" rows="10" readonly><?php if (isset($opisR)) echo $opisR;
                                                                             else echo ""; ?></textarea><br><br>
         <input type="submit" name="check" value="Prevedi">
