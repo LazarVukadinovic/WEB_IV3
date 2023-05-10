@@ -23,17 +23,19 @@
         <table>
             <?php 
                 include "./database/connection.php";
+                $sql = "SELECT * FROM rezervacije";
+                $result = $conn->query($sql);
 
                 $j=2;
                 for($i=0; $i<13; $i++)
                 {
             ?>
                 <tr>
-                    <th class="celija"><button class="" id="<?php echo $j; ?>"><?php echo $j++; ?></button></th>
-                    <th class="celija"><button class="" id="<?php echo $j; ?>"><?php echo $j++; ?></button></th>
+                    <th class="celija"><button class="<?php  ?>"><?php echo $j++; ?></button></th>
+                    <th class="celija"><button class="slobodno"><?php echo $j++; ?></button></th>
                     <th></th>
-                    <th class="celija"><button class="" id="<?php echo $j; ?>"><?php echo $j++; ?></button></th>
-                    <th class="celija"><button class="" id="<?php echo $j; ?>"><?php echo $j++; ?></button></th>
+                    <th class="celija"><button class="slobodno"><?php echo $j++; ?></button></th>
+                    <th class="celija"><button class="slobodno"><?php echo $j++; ?></button></th>
                 </tr>
             <?php }?>
         </table>

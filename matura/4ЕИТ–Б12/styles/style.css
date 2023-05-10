@@ -50,14 +50,15 @@ th{
 
 th button{
   padding: 5px;
-}
-
-.zauzeto{
-  background-color: #FF0000;
+  color: #fff;
 }
 
 .slobodno{
   background-color: #008000;
+}
+
+.zauzeto{
+  background-color: #FF0000;
 }
 
 .celija {
