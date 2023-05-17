@@ -15,36 +15,55 @@
     </div>
     <div class="navigacija">
         <a href="./">Pocetna</a>
-        <a href="./pages/about.php">O autoru</a>
+        <a href="./pages/about.html">O autoru</a>
         <a href="./pages/uputstvo.html">Uputstvo</a>
     </div>
 
     <div class="bus">
         <table>
-            <?php 
-                include "./database/connection.php";
-                $sql = "SELECT * FROM rezervacije";
-                $result = $conn->query($sql);
+            <?php
+                function Provera($j){
+                    include "./database/connection.php";
+                    $sql = "SELECT * FROM rezervacije WHERE broj_sedista = $j";
+                    $result = $conn->query($sql);
+                    $row = $result->fetch_assoc();
+                    if($row['rezervacija'] == 1)
+                    echo "slobodno";
+                    else
+                    echo "zauzeto";
+                }
 
                 $j=2;
                 for($i=0; $i<13; $i++)
                 {
             ?>
                 <tr>
-                    <th class="celija"><button class="<?php  ?>"><?php echo $j++; ?></button></th>
-                    <th class="celija"><button class="slobodno"><?php echo $j++; ?></button></th>
+                    <th class="celija"><button id="<?php echo 's_' . $j; ?>" class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
+                    <th class="celija"><button id="<?php echo 's_' . $j; ?>" class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
                     <th></th>
-                    <th class="celija"><button class="slobodno"><?php echo $j++; ?></button></th>
-                    <th class="celija"><button class="slobodno"><?php echo $j++; ?></button></th>
+                    <th class="celija"><button id="<?php echo 's_' . $j; ?>" class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
+                    <th class="celija"><button id="<?php echo 's_' . $j; ?>" class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
                 </tr>
             <?php }?>
         </table>
+
+        <div class="forma">
+            <form action="./handlers/rezervisi.php" method="POST">
+                <label for="sediste">Sediste:</label>
+                <input type="text" id="sediste" name="sediste" readonly><br>
+                <label for="ime">Ime i prezime:</label>
+                <input type="text" name="ime"><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email"><br>
+                <input type="submit" value="Posalji">
+            </form>
+        </div>
     </div>
 
     <div class="footer">
         <p>© Autobuska stanica</p>
     </div>
-
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
