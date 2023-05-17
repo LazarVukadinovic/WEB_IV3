@@ -37,13 +37,17 @@
                 for($i=0; $i<13; $i++)
                 {
             ?>
-                <tr>
-                    <th class="celija"><button id="<?php echo 's_' . $j; ?>" class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
-                    <th class="celija"><button id="<?php echo 's_' . $j; ?>" class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
-                    <th></th>
-                    <th class="celija"><button id="<?php echo 's_' . $j; ?>" class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
-                    <th class="celija"><button id="<?php echo 's_' . $j; ?>" class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
-                </tr>
+            <tr>
+                <th class="celija"><button id="<?php echo 's_' . $j; ?>"
+                        class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
+                <th class="celija"><button id="<?php echo 's_' . $j; ?>"
+                        class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
+                <th></th>
+                <th class="celija"><button id="<?php echo 's_' . $j; ?>"
+                        class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
+                <th class="celija"><button id="<?php echo 's_' . $j; ?>"
+                        class="<?php Provera($j); ?>"><?php echo $j++; ?></button></th>
+            </tr>
             <?php }?>
         </table>
 
