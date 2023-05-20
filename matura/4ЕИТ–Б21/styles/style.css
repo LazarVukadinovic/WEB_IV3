@@ -20,15 +20,6 @@ span, header p{
     margin-bottom: 0;
 }
 
-p>a{
-    color: #fff;
-    text-decoration: none;
-}
-
-p>a:hover{
-    color: #fff;
-}
-
 span{
     border-left: 2px solid #fff;
 }
