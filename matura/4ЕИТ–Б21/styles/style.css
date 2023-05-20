@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header .c1{
     background-color: #264C73;
     color: #fff;
@@ -12,6 +18,15 @@ span, header p{
     display: inline-block;
     padding: 15px 25px;
     margin-bottom: 0;
+}
+
+p>a{
+    color: #fff;
+    text-decoration: none;
+}
+
+p>a:hover{
+    color: #fff;
 }
 
 span{
@@ -34,4 +49,15 @@ table {
 
 .boja{
     background-color: #C0C0C0;
+}
+
+footer{
+    padding-top: 14px;
+    margin-top: auto;
+    background-color: #264C73;
+    color: #fff;
+}
+
+footer a{
+    color: #fff;
 }
